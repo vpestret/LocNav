@@ -44,7 +44,9 @@ def prepare_interp_function(duration, sc_min, sc_max, max_delta=0.):
 
 
 # combines phase noise with some central frequency and does sampling.
-#
+# gets phase noise interpolated function as tx_fpn together with deviation tx_pn_dev and sine_freq as the central frequency
+# there is also rx_fpn noise
+# if tdelta is not None then the dual mode is enabled with tdelta delay
 def combine_pashe_noise(time_len, samp_freq, sine_freq, ph_start, tx_fpn, tx_pn_dev, tdelta=None, rx_fpn=None, rx_pn_dev=0.):
     num_samples = int(time_len * samp_freq)
     do_delayed = (tdelta is not None)
