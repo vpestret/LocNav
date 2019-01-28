@@ -2,6 +2,8 @@
 from phase_noise_mod import *
 import math
 
+LSp = 300. * 10 ** 6 # meters per second
+
 class GeomPoint:
 
     def __init__(self, x, y, z):
